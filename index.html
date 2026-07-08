@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Симуляция ткани — Position Based Dynamics (WebGPU)</title>
+  <link rel="stylesheet" href="src/style.css" />
+  <link rel="icon" type="image/svg+xml" href="/src/assets/vite.svg" />
+</head>
+<body>
+  <div id="myModal" class="modal-overlay">
+    
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      
+      <h3>Симуляция ткани в WebGPU</h3>
+      <p>Реализован метод XPBD</p>
+      <p>Используется интеграция Верле</p>
+    </div>
+
+  </div>
+
+  <canvas id="gpuCanvas"></canvas>
+
+  <div id="panel">
+    <h1>Ткань · PBD / WebGPU</h1>
+    <label class="checkbox-row">
+      <input type="checkbox" id="gravityCheckbox" />
+      <span>Включить гравитацию</span>
+    </label>
+    <p id="status">Инициализация WebGPU…</p>
+    <p class="hint">
+      Красные вершины — закреплены. Синяя вершина — двигается по закону
+      синуса по вертикали, создавая волны. ЛКМ + перетаскивание — вращение
+      камеры, колесо мыши — зум.
+    </p>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
